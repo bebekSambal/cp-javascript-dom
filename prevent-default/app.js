@@ -2,8 +2,13 @@ const form = document.querySelector('#form');
 const input = document.querySelector('input');
 const list = document.querySelector('#notes');
 
-input.addEventListener('change', (e)=>{
-    console.log('nilai berubah');
+// input.addEventListener('change', (e)=>{
+//     console.log('ada perubahan');
+// });
+
+input.addEventListener('input', (e)=>{
+    document.querySelector('h1').innerText = input.value;
+    console.log('ada input');
 });
 
 
