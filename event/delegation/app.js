@@ -13,6 +13,13 @@ form.addEventListener('submit', function(e) {
 });
 
 list.addEventListener('click', (e)=>{
-   e.target.nodeName === 'LI' && e.target.remove();
+
+    // dengan short circuit operator
+  // e.target.nodeName === 'LI' && e.target.remove();
+
+  // dengan if biasa
+  if(e.target.nodeName === 'LI'){
+    e.target.remove();
+  };
    console.dir(e.target);
 })
